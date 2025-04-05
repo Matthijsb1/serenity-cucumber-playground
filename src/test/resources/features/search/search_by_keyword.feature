@@ -1,4 +1,4 @@
-Feature: Search by keyword
+Feature: Search by keyword on DuckDuckGo
 
   @green
   Scenario: Searching for 'green'
