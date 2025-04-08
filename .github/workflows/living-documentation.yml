@@ -18,7 +18,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'adopt'
-        cache: maven
+        # cache: maven
         
     # - name: Cache the Maven packages to speed up build
     #   uses: actions/cache@v3
