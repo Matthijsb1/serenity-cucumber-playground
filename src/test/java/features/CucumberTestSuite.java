@@ -1,4 +1,4 @@
-package starter;
+package features;
 
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;
@@ -15,9 +15,14 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty,timeline:build/test-results/timeline")
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"starter.stepdefinitions "},
-        plugin = {"pretty", "html:target/cucumber-reports"}
-) 
+        glue = {
+            "features.homepage.steps",
+            "features.search.steps",
+            "features.generic"
+        },
+        plugin = { "pretty", "html:target/cucumber-reports" }
+)
 
 public class CucumberTestSuite {
+        
 }

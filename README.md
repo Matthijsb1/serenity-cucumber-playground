@@ -5,18 +5,20 @@ This project is a clone of: https://github.com/serenity-bdd/serenity-cucumber-st
 
 # Executing the tests
 To run the sample project:
-- Run the `CucumberTestSuite` test runner class
-- Or run `mvn verify` from the command line.
+- Run `mvn verify` from the command line.
+- Or run the `CucumberTestSuite` test runner class
 
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
 - `mvn clean verify -Ddriver=firefox`
 
 The test results will be recorded in the `target/site/serenity` directory.
 
+# Cheetsheat for Screenplay tests
+https://github.com/serenity-bdd/serenity-bdd.github.io/blob/master/docs/screenplay/screenplay-webdriver.md
 
 
+From the dev's:
 # Getting started with Serenity and Cucumber
-
 Serenity BDD is a library that makes it easier to write high quality automated acceptance tests, with powerful reporting and living documentation features. It has strong support for both web testing with Selenium, and API testing using RestAssured.
 
 Serenity strongly encourages good test automation design, and supports several design patterns, including classic Page Objects, the newer Lean Page Objects/ Action Classes approach, and the more sophisticated and flexible Screenplay pattern.
