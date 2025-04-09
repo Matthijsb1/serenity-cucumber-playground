@@ -17,10 +17,23 @@ public class HomepageStepDefinitions {
         return Task.where("{0} opens the DuckDuckGo home page",
                 Open.browserOn().the(DuckDuckGoHomePage.class));
     }
-    
+
     @Then("{actor} should see the logo of DuckDuckGo")
-    public void theLogoShouldBeVisible() {
-        HomepageSteps.verifyLogoIsVisible();
+    public void theLogoShouldBeVisible(Actor actor) {
+        actor.wasAbleTo(HomepageSteps.seeTheLogo());
+        // HomepageSteps.verifyLogoIsVisible();
+    }
+
+    @When("{actor} sets DuckDuckGo as his default search engine")
+    public void setDefaultSearchEgine(Actor actor) {
+        actor.attemptsTo(
+                HomepageSteps.setSearchEngine());
+    }
+
+    @Then("{actor} should see instructions on how to do this")
+    public void should_see_instructions_on_default_search_engine(Actor actor) {
+        actor.attemptsTo(
+                HomepageSteps.seeInstructions());
     }
 
     @Given("{actor} is researching things on the internet")
@@ -32,14 +45,12 @@ public class HomepageStepDefinitions {
     @When("{actor} looks up {string}")
     public void searchesFor(Actor actor, String term) {
         actor.attemptsTo(
-            HomepageSteps.about(term)
-        );
+                HomepageSteps.about(term));
     }
-    
+
     @Then("{actor} should see information about {string}")
-    public void should_see_information_about(Actor actor, String term) {
+    public void shouldSeeInformationAbout(Actor actor, String term) {
         actor.attemptsTo(
-                Ensure.that(TheWebPage.title()).containsIgnoringCase(term)
-        );
+                Ensure.that(TheWebPage.title()).containsIgnoringCase(term));
     }
 }

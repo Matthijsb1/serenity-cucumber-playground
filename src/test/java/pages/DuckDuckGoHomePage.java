@@ -7,26 +7,38 @@ import net.serenitybdd.screenplay.targets.Target;
 
 @DefaultUrl("https://duckduckgo.com/")
 public class DuckDuckGoHomePage extends PageObject {
-    public static final Target LOGO = 
-            Target.the("DuckDuckGo Logo")
-                  .locatedBy("img[alt='DuckDuckGo Logo']");
+        public static final Target LOGO = Target
+                        .the("DuckDuckGo Logo")
+                        .locatedBy("img[alt='DuckDuckGo Logo']");
 
-    public static final Target SEARCH_FIELD = 
-            Target.the("Search field")
-                  .locatedBy("#searchbox_input");
+        public static final Target DEFAULT_BUTTON = Target
+                        .the("Set as Default Search button")
+                        .locatedBy("//a[contains(@class, 'button') and text()='Instellen als standaard zoekmachine']");
 
-    public static final Target SEARCH_BUTTON = 
-            Target.the("Search button")
-                  .locatedBy("#search_button_homepage");
+        public static final Target GOT_IT_BUTTON = Target
+                        .the("Got It button")
+                        .locatedBy("//button[text()='Begrepen']");
 
-    public static final Target BODY =
-            Target.the("article identifier")
-                  .locatedBy("//article");
-    
-    public static boolean isLogoVisible() {
-            return WebElementQuestion
-                            .the(LOGO)
-                            .answeredBy(null)
-                            .isVisible();
-    }
+        public static final Target DOWNLOAD_BROWSER_BUTTON = Target
+                        .the("Download Browser button")
+                        .locatedBy("//a[contains(@class, 'button') and text()='Browser downloaden']");
+
+        public static final Target SEARCH_FIELD = Target
+                        .the("Search field")
+                        .locatedBy("#searchbox_input");
+
+        public static final Target SEARCH_BUTTON = Target
+                        .the("Search button")
+                        .locatedBy("#search_button_homepage");
+
+        public static final Target BODY = Target
+                        .the("article identifier")
+                        .locatedBy("//article");
+
+        public static boolean isLogoVisible() {
+                return WebElementQuestion
+                                .the(LOGO)
+                                .answeredBy(null)
+                                .isVisible();
+        }
 }
