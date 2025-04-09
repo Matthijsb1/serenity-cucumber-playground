@@ -27,6 +27,12 @@ public class HomepageSteps {
                 Click.on(
                         DuckDuckGoHomePage.DEFAULT_BUTTON));
     }
+    
+    public static Performable downloadBrowser() {
+        return Task.where("{0} clicks download browser",
+                Click.on(
+                        DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON));
+    }
 
     public static Performable seeInstructions() {
         return Task.where("{0} sees instructions to set DDG as default search}", actor -> {

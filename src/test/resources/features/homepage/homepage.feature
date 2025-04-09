@@ -8,3 +8,8 @@ Feature: Check homepage features
         Given Hans is on the homepage
         When he sets DuckDuckGo as his default search engine
         Then he should see instructions on how to do this
+
+    Scenario: Download the browser
+        Given Hans is on the homepage
+        When he want to download the browser
+        Then he is on the download page

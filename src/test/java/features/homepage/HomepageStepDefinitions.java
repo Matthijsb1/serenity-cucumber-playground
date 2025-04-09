@@ -36,6 +36,18 @@ public class HomepageStepDefinitions {
                 HomepageSteps.seeInstructions());
     }
 
+    @When("{actor} want to download the browser")
+    public void downloadBrowser(Actor actor) {
+        actor.attemptsTo(
+                HomepageSteps.downloadBrowser());
+    }
+
+    @Then("{actor} is on the download page")
+    public void isOnDownloadPage(Actor actor) {
+        actor.attemptsTo(
+                Ensure.that(TheWebPage.title()).containsIgnoringCase("DuckDuckGo voor Windows downloaden"));
+    }
+
     @Given("{actor} is researching things on the internet")
     @Given("{actor} is on the homepage")
     public void researchingThings(Actor actor) {

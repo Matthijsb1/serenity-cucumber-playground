@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.targets.Target;
 public class DuckDuckGoHomePage extends PageObject {
         public static final Target LOGO = Target
                         .the("DuckDuckGo Logo")
-                        .locatedBy("img[alt='DuckDuckGo Logo']");
+                        .locatedBy("//a[contains(@class, 'header_logoImg')]//img");
 
         public static final Target DEFAULT_BUTTON = Target
                         .the("Set as Default Search button")
@@ -17,7 +17,7 @@ public class DuckDuckGoHomePage extends PageObject {
 
         public static final Target GOT_IT_BUTTON = Target
                         .the("Got It button")
-                        .locatedBy("//button[text()='Begrepen']");
+                        .locatedBy("//button[text()='Ik snap het']");
 
         public static final Target DOWNLOAD_BROWSER_BUTTON = Target
                         .the("Download Browser button")
