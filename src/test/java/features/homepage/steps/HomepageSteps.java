@@ -13,25 +13,22 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class HomepageSteps {
 
-    public static Performable seeTheLogo() {
-        return Task.where("checks if the logo is visible", actor -> {
-            actor.attemptsTo(
-                    Ensure.that(
-                            DuckDuckGoHomePage.LOGO)
-                            .isDisplayed());
-        });
-    }
-
     public static Performable setSearchEngine() {
         return Task.where("{0} clicks set as Default Search",
                 Click.on(
                         DuckDuckGoHomePage.DEFAULT_BUTTON));
     }
-    
+
     public static Performable downloadBrowser() {
         return Task.where("{0} clicks download browser",
                 Click.on(
                         DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON));
+    }
+
+    public static Performable openAiSearch() {
+        return Task.where("{0} clicks on AI Search Button",
+                Click.on(
+                        DuckDuckGoHomePage.AI_BUTTON));
     }
 
     public static Performable seeInstructions() {

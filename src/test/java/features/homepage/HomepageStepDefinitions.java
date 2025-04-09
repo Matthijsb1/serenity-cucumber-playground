@@ -15,13 +15,31 @@ import pages.DuckDuckGoHomePage;
 public class HomepageStepDefinitions {
     public static Performable theSearchHomePage() {
         return Task.where("{0} opens the DuckDuckGo home page",
-                Open.browserOn().the(DuckDuckGoHomePage.class));
+                Open.browserOn()
+                        .the(DuckDuckGoHomePage.class));
     }
 
-    @Then("{actor} should see the logo of DuckDuckGo")
-    public void theLogoShouldBeVisible(Actor actor) {
-        actor.wasAbleTo(HomepageSteps.seeTheLogo());
-        // HomepageSteps.verifyLogoIsVisible();
+    @Then("{actor} is on the {string} page")
+    public void isOnPageX(Actor actor, String expectedPageName) {
+        String actualPageName = TheWebPage.title().answeredBy(actor);
+
+        if (expectedPageName.equalsIgnoreCase("AI")) {
+            actor.attemptsTo(
+                    Ensure.that(actualPageName)
+                            .containsIgnoringCase("Duck.ai"));
+        } else if (expectedPageName.equalsIgnoreCase("download")) {
+            actor.attemptsTo(
+                    Ensure.that(actualPageName)
+                            .containsIgnoringCase("DuckDuckGo voor Windows downloaden"));
+        } else {
+            throw new IllegalArgumentException("Your test is broken, the page title was: " + actualPageName);
+        }
+    }
+
+    @When("{actor} opens the AI Search")
+    public void clickOnAiButton(Actor actor) {
+        actor.attemptsTo(
+                HomepageSteps.openAiSearch());
     }
 
     @When("{actor} sets DuckDuckGo as his default search engine")
@@ -40,12 +58,6 @@ public class HomepageStepDefinitions {
     public void downloadBrowser(Actor actor) {
         actor.attemptsTo(
                 HomepageSteps.downloadBrowser());
-    }
-
-    @Then("{actor} is on the download page")
-    public void isOnDownloadPage(Actor actor) {
-        actor.attemptsTo(
-                Ensure.that(TheWebPage.title()).containsIgnoringCase("DuckDuckGo voor Windows downloaden"));
     }
 
     @Given("{actor} is researching things on the internet")

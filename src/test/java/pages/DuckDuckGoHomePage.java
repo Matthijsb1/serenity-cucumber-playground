@@ -7,9 +7,9 @@ import net.serenitybdd.screenplay.targets.Target;
 
 @DefaultUrl("https://duckduckgo.com/")
 public class DuckDuckGoHomePage extends PageObject {
-        public static final Target LOGO = Target
-                        .the("DuckDuckGo Logo")
-                        .locatedBy("//a[contains(@class, 'header_logoImg')]//img");
+        public static final Target AI_BUTTON = Target
+                        .the("AI button")
+                        .locatedBy("//a[contains(@class, 'aiChatButton')]");
 
         public static final Target DEFAULT_BUTTON = Target
                         .the("Set as Default Search button")
@@ -35,10 +35,10 @@ public class DuckDuckGoHomePage extends PageObject {
                         .the("article identifier")
                         .locatedBy("//article");
 
-        public static boolean isLogoVisible() {
-                return WebElementQuestion
-                                .the(LOGO)
-                                .answeredBy(null)
-                                .isVisible();
-        }
+        // public static boolean isLogoVisible() {
+        //         return WebElementQuestion
+        //                         .the(LOGO)
+        //                         .answeredBy(null)
+        //                         .isVisible();
+        // }
 }

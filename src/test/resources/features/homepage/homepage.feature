@@ -1,8 +1,9 @@
 Feature: Check homepage features
 
-    Scenario: Check DuckDuckGo logo
+    Scenario: Open AI Search
         Given Hans is on the homepage
-        Then he should see the logo of DuckDuckGo
+        When he opens the AI Search
+        Then he is on the AI page
 
     Scenario: Set default search engine to DuckDuckGo
         Given Hans is on the homepage
