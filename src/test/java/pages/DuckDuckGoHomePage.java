@@ -1,20 +1,11 @@
 package pages;
 
-import java.util.List;
-
-import org.openqa.selenium.WebElement;
-
 import net.serenitybdd.annotations.DefaultUrl;
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
 
 @DefaultUrl("https://duckduckgo.com/")
 public class DuckDuckGoHomePage extends PageObject {
-        // public static final Target AI_BUTTON = Target
-        // .the("AI button")
-        // .locatedBy("//a[contains(@class, 'aiChatButton')]");
-
 
         public static final Target VISIBLE_CHAT_BUTTON = Target
                         .the("visible chat button")
@@ -44,10 +35,4 @@ public class DuckDuckGoHomePage extends PageObject {
                         .the("article identifier")
                         .locatedBy("//article");
 
-        // public static boolean isLogoVisible() {
-        // return WebElementQuestion
-        // .the(LOGO)
-        // .answeredBy(null)
-        // .isVisible();
-        // }
 }

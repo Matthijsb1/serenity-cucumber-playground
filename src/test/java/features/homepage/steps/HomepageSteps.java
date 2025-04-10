@@ -3,8 +3,6 @@ package features.homepage.steps;
 import pages.DuckDuckGoHomePage;
 import org.openqa.selenium.Keys;
 
-import io.cucumber.java.en.Then;
-import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
