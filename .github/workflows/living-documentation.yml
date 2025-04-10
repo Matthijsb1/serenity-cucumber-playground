@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4.2.2
     - name: Set up JDK 17
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v4.7.1
       with:
         java-version: '17'
         distribution: 'adopt'
         cache: maven
         
     - name: Cache the Maven packages to speed up build
-      uses: actions/cache@v3
+      uses: actions/cache@v4.2.3
       with:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -31,7 +31,7 @@ jobs:
       run: mvn -B verify --file pom.xml -Denvironment=with_screenshots
 
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.1
+      uses: JamesIves/github-pages-deploy-action@v4.7.3
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: target/site/serenity # The folder the action should deploy.
