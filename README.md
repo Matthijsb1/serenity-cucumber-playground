@@ -5,7 +5,7 @@ This project is a clone of: https://github.com/serenity-bdd/serenity-cucumber-st
 
 # Executing the tests
 To run the sample project:
-- Run `mvn verify` from the command line.
+- Run `mvn clean verify` from the command line. (cleans up /target/ and runs tests)
 - Or run the `CucumberTestSuite` test runner class
 
 By default, the tests will run using Chrome. You can run them in Firefox by overriding the `driver` system property, e.g.
@@ -15,6 +15,14 @@ The test results will be recorded in the `target/site/serenity` directory.
 
 # Cheetsheat for Screenplay tests
 https://github.com/serenity-bdd/serenity-bdd.github.io/blob/master/docs/screenplay/screenplay-webdriver.md
+
+
+# Updating POM dependencies
+mvn versions:display-dependency-updates
+- This checks all dependencies in pom.xml and displays newer versions.
+
+mvn versions:Display-plugin-updates
+- This checks all Maven plugins in pom.xml and displays newer versions.
 
 
 From the dev's:
