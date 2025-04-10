@@ -25,10 +25,10 @@ public class HomepageSteps {
                         DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON));
     }
 
-    public static Performable openAiSearch() {
-        return Task.where("{0} clicks on AI Search Button",
+    public static Performable openAiChat() {
+        return Task.where("{0} clicks on AI Chat Button",
                 Click.on(
-                        DuckDuckGoHomePage.AI_BUTTON));
+                        DuckDuckGoHomePage.VISIBLE_CHAT_BUTTON));
     }
 
     public static Performable seeInstructions() {

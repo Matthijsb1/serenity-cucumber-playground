@@ -1,9 +1,9 @@
 Feature: Check homepage features
 
-    Scenario: Open AI Search
+    Scenario: Open AI Chat
         Given Hans is on the homepage
-        When he opens the AI Search
-        Then he is on the AI page
+        When he opens the AI Chat
+        Then he is on the "AI" page
 
     Scenario: Set default search engine to DuckDuckGo
         Given Hans is on the homepage
@@ -13,4 +13,4 @@ Feature: Check homepage features
     Scenario: Download the browser
         Given Hans is on the homepage
         When he want to download the browser
-        Then he is on the download page
+        Then he is on the "download" page

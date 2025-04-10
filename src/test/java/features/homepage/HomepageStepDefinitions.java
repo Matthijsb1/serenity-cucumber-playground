@@ -36,10 +36,10 @@ public class HomepageStepDefinitions {
         }
     }
 
-    @When("{actor} opens the AI Search")
+    @When("{actor} opens the AI Chat")
     public void clickOnAiButton(Actor actor) {
         actor.attemptsTo(
-                HomepageSteps.openAiSearch());
+                HomepageSteps.openAiChat());
     }
 
     @When("{actor} sets DuckDuckGo as his default search engine")
