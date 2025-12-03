@@ -13,7 +13,7 @@ public class DuckDuckGoHomePage extends PageObject {
 
         public static final Target DEFAULT_BUTTON = Target
                         .the("Set as Default Search button")
-                        .locatedBy("//a[contains(@class, 'button') and normalize-space(text()='Set As Default Search')]");
+                        .locatedBy("//a[contains(@class, 'button') and text()='Set As Default Search']");
 
         public static final Target GOT_IT_BUTTON = Target
                         .the("Got It button")
@@ -21,7 +21,7 @@ public class DuckDuckGoHomePage extends PageObject {
 
         public static final Target DOWNLOAD_BROWSER_BUTTON = Target
                         .the("Download Browser button")
-                        .locatedBy("//a[contains(@class, 'button') and normalize-space(text()='Download DuckDuckGo for Windows')]");
+                        .locatedBy("//a[contains(@class, 'button') and text()='Download Browser']");
 
 
         public static final Target SEARCH_FIELD = Target

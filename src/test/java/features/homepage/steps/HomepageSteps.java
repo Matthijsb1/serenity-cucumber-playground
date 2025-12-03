@@ -20,7 +20,6 @@ public class HomepageSteps {
 
     public static Performable downloadBrowser() {
         return Task.where("{0} clicks download browser",
-                Scroll.to(DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON),
                 Click.on(
                         DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON));
     }
