@@ -13,7 +13,7 @@ import net.serenitybdd.screenplay.questions.page.TheWebPage;
 import pages.DuckDuckGoHomePage;
 
 public class HomepageStepDefinitions {
-    public static Performable theSearchHomePage() {
+    public static Performable theHomePage() {
         return Task.where("{0} opens the DuckDuckGo home page",
                 Open.browserOn()
                         .the(DuckDuckGoHomePage.class));
@@ -30,7 +30,7 @@ public class HomepageStepDefinitions {
         } else if (expectedPageName.equalsIgnoreCase("download")) {
             actor.attemptsTo(
                     Ensure.that(actualPageName)
-                            .containsIgnoringCase("DuckDuckGo voor Windows downloaden"));
+                            .containsIgnoringCase("Bezig met downloaden"));
         } else {
             throw new IllegalArgumentException("Your test is broken, the page title was: " + actualPageName);
         }
@@ -63,7 +63,7 @@ public class HomepageStepDefinitions {
     @Given("{actor} is researching things on the internet")
     @Given("{actor} is on the homepage")
     public void researchingThings(Actor actor) {
-        actor.wasAbleTo(HomepageStepDefinitions.theSearchHomePage());
+        actor.wasAbleTo(HomepageStepDefinitions.theHomePage());
     }
 
     @When("{actor} looks up {string}")

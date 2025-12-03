@@ -17,7 +17,7 @@ public class DuckDuckGoHomePage extends PageObject {
 
         public static final Target GOT_IT_BUTTON = Target
                         .the("Got It button")
-                        .locatedBy("//button[text()='Ik snap het']");
+                        .locatedBy("//button[text()='Later misschien']");
 
         public static final Target DOWNLOAD_BROWSER_BUTTON = Target
                         .the("Download Browser button")
