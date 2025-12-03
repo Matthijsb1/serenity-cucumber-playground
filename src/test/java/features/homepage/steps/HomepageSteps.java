@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
 public class HomepageSteps {
@@ -19,6 +20,7 @@ public class HomepageSteps {
 
     public static Performable downloadBrowser() {
         return Task.where("{0} clicks download browser",
+                Scroll.to(DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON),
                 Click.on(
                         DuckDuckGoHomePage.DOWNLOAD_BROWSER_BUTTON));
     }
