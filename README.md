@@ -13,8 +13,14 @@ By default, the tests will run using Chrome. You can run them in Firefox by over
 
 The test results will be recorded in the `target/site/serenity` directory.
 
+# Results
+Results are automatically published. Settings: Repo > Settings > Code and automation > Pages
+gh-pages branch is published on:
+`https://matthijsb1.github.io/serenity-cucumber-playground/`
+
+
 # Cheetsheat for Screenplay tests
-https://github.com/serenity-bdd/serenity-bdd.github.io/blob/master/docs/screenplay/screenplay-webdriver.md
+`https://github.com/serenity-bdd/serenity-bdd.github.io/blob/master/docs/screenplay/screenplay-webdriver.md`
 
 
 # Updating POM dependencies
