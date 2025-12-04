@@ -12,5 +12,5 @@ Feature: Check homepage features
 
     Scenario: Download the browser
         Given Hans is on the homepage
-        When he want to download the browser
+        When he downloads the browser
         Then he is on the "download" page

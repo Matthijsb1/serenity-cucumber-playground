@@ -54,7 +54,7 @@ public class HomepageStepDefinitions {
                 HomepageSteps.seeInstructions());
     }
 
-    @When("{actor} want to download the browser")
+    @When("{actor} downloads the browser")
     public void downloadBrowser(Actor actor) {
         actor.attemptsTo(
                 HomepageSteps.downloadBrowser());
