@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Search by keyword on DuckDuckGo" skipped="0" tests="2" time="16.48" timestamp="2025-12-04 10:43:26"><testcase name="Searching for 'red'"/><testcase name="Searching for 'green'"/></testsuite>
